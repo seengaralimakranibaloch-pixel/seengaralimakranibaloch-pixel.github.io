@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Pakistan Jobs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+      color: #f0c27a;
+    }
+    .date {
+      font-size: 0.9rem;
+      margin-bottom: 25px;
+      color: #a0a0a0;
+    }
+    .job-card {
+      background: #16213e;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .job-card a {
+      color: #f0c27a;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .job-card p {
+      margin: 5px 0 0;
+      font-size: 0.85rem;
+      color: #b0b0b0;
+    }
+    .coffee-btn {
+      display: inline-block;
+      margin-top: 30px;
+      color: #f0c27a;
+      text-decoration: none;
+      border: 1px solid #f0c27a;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>💼 Daily Pakistan Jobs</h1>
+  <p class="date">📅 Updated: <span id="today"></span></p>
+
+  <div class="job-card">
+    <a href="https://www.rozee.pk" target="_blank">Latest Jobs on Rozee.pk</a>
+    <p>Search thousands of fresh jobs across Pakistan — updated daily.</p>
+  </div>
+
+  <div class="job-card">
+    <a href="https://pk.indeed.com" target="_blank">Indeed Pakistan</a>
+    <p>International & local listings. Filter by city, salary, and skills.</p>
+  </div>
+
+  <div class="job-card">
+    <a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a>
+    <p>Professional roles. Network while you apply. Remote options available.</p>
+  </div>
+
+  <div class="job-card">
+    <a href="https://www.mustakbil.com" target="_blank">Mustakbil.com</a>
+    <p>Pakistan's largest jobs site. Government and private vacancies.</p>
+  </div>
+
+  <div class="job-card">
+    <a href="https://www.paperpk.com" target="_blank">PaperPk Jobs</a>
+    <p>Newspaper ads, teaching, banking, and daily wagers.</p>
+  </div>
+
+  <p style="margin-top:25px; font-size:0.9rem;">🔁 Come back daily — I'll add new links here by hand.</p>
+
+  <a class="coffee-btn" href="https://ko-fi.com/onegoodthing" target="_blank">☕ Buy me a coffee</a>
+
+  <div class="footer">
+    Made by someone who won't give up.
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById('today').textContent = d.toLocaleDateString('en-PK', {
+      year: 'numeric', month: 'long', day: 'numeric'
+    });
+  </script>
+</body>
+</html>
