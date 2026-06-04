@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One Good Thing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+      flex-direction: column;
+    }
+    .quote-box {
+      font-size: 1.6rem;
+      max-width: 300px;
+      margin-bottom: 40px;
+    }
+    .coffee-btn {
+      color: #f0c27a;
+      text-decoration: none;
+      border: 1px solid #f0c27a;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box" id="quote"></div>
+  <a class="coffee-btn" href="https://ko-fi.com/onegoodthing" target="_blank">☕ Buy me a coffee</a>
+  <script>
+    const quotes = [
+      "You've survived 100% of your bad days.",
+      "One tiny step is still a step.",
+      "You are enough just as you are.",
+      "The night is darkest before dawn.",
+      "Rest is not giving up.",
+      "You have a kind heart. That matters."
+    ];
+
+    const today = new Date().toLocaleDateString();
+    const lastDate = localStorage.getItem('quoteDate');
+    let quoteIndex;
+
+    if (lastDate === today) {
+      quoteIndex = parseInt(localStorage.getItem('quoteIndex'));
+    } else {
+      quoteIndex = Math.floor(Math.random() * quotes.length);
+      localStorage.setItem('quoteDate', today);
+      localStorage.setItem('quoteIndex', quoteIndex);
+    }
+
+    document.getElementById('quote').textContent = quotes[quoteIndex];
+  </script>
+</body>
+</html>
